@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
 
   const token = authorization.replace('Bearer ', '');
 
-  jwt.verify(token, 'MYVERYSECRETKEY', async (err, payload) => {
+  jwt.verify(token, process.env.secret, async (err, payload) => {
     if (err) {
       return res.status(401).send({ error: 'You must be logged in.' });
     }
