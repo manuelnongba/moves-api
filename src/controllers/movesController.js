@@ -34,7 +34,7 @@ exports.deleteMoves = async (req, res) => {
   try {
     await Moves.deleteOne({ _id: req.params.id });
 
-    res.status(204).json({ message: 'success' });
+    res.status(204).send({ message: 'success' });
   } catch (error) {
     res.send({ error: 'Smething went wrong' });
   }
