@@ -21,6 +21,12 @@ npm run dev
 
 ## Endpoints
 
+'POST /signup'
+Create an account.
+
+'POST /login'
+Login.
+
 'GET /moves'
 Retrieve all saved movements.
 
